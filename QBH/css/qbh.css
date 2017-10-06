@@ -1,0 +1,330 @@
+/* 圆点导航 */
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+  
+#fp-nav.right {
+    right: 17px;
+}
+  
+#fp-nav ul li{
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+  
+#fp-nav ul li a{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+  
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+}
+  
+#fp-nav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    transition: all 0.1s ease-in-out;
+}
+  
+#fp-nav ul li:hover a span{
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+
+/* 直接进入按钮 */
+.shopping-center {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 999;
+    background-color: rgb(247, 243, 10);
+    border-radius: 50%;
+}
+
+/* 第一屏 */
+.qbh-title {
+    background-image: url(../images/qbh-title-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: relative;
+}
+/* 商品悬浮窗 */
+.qbh-title .qbh-title-extra {
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: product 2s linear infinite;
+}
+/* 沙发 */
+.qbh-title .qbh-title-sofa {
+    position: absolute;
+    bottom: 329px;
+    left: 50%;
+    transform: translateX(-200px);
+    animation:  upsofa 1.5s linear infinite;
+}
+/* 网站小飞艇 */
+.qbh-title .qbh-title-name {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    animation: upname 2s linear infinite;
+} 
+/* 沙发动画 */
+@keyframes upsofa {
+    0% {
+      bottom: 329px;
+    }
+  
+    50% {
+      bottom: 375px;
+    }
+  
+    100% {
+      bottom: 329px;
+    }
+}
+/* 网站名称动画 */
+@keyframes upname {
+    0% {
+      right: 20%;
+    }
+  
+    50% {
+      right: 32%;
+    }
+  
+    100% {
+      right: 20%;
+    }
+}
+/* 新增动画 */
+@keyframes product {
+    0% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 200px;
+    }
+    100% {
+        bottom: 180px;
+    }
+}
+
+/* 第二屏 */
+.list {
+    background-image: url(../images/qbh-list-bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+}
+.list .qbh-list-worda {
+    position: absolute;
+    bottom: 500px;
+    left: 50%;
+    margin-bottom: 50px;
+    margin-left: -180px;
+}
+.list .qbh-list-wordb {
+    position: absolute;
+    bottom: 500px;
+    left: 50%;
+    margin-bottom: 50px;
+    margin-left: -180px;
+    opacity: 0;
+}
+.list .qbh-list-computer {
+    position: absolute;
+    left: 50%;
+    margin-left: -495px;
+    width: 990px;
+    height: 500px;
+    bottom: 0;
+}
+.list .qbh-list-search {
+    width: 222px;
+    height: 45px;
+    background-image: url(../images/qbh-list-search-box.png);
+    position: absolute;
+    right: -30px;
+    bottom: 300px;
+    display: none;
+}
+.list .qbh-list-search-font {
+    position: absolute;
+    right: 25px;
+    bottom: 300px;
+    display: none;
+}
+.list .qbh-list-search-finish {
+    position: absolute;
+    right: 370px;
+    bottom: 300px;
+    display: none;
+}
+
+.list .qbh-list-sofas {
+    position: absolute;
+    display: none;
+    bottom: 217px;
+    right: 270px;
+    height: 100px;
+}
+/* 假沙发 */
+.list .qbh-list-sofa-pic {
+    position: absolute;
+    bottom: 348px;
+    left: 393px;
+    width: 100px;
+    z-index: 10;
+    display: none;
+}
+
+/* 第三屏 */
+.buy {
+    position: relative;
+}
+
+.buy .qbh-buy-main {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -350px;
+    width: 700px;
+    height: 500px;
+    background-image: url(../images/qbh-buy-main-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.buy .qbh-buy-select {
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    width: 300px;
+    height: 250px;
+}
+.buy .qbh-buy-choose-start, .buy .qbh-buy-choose-end {
+    position: absolute;
+}
+.buy .qbh-buy-choose-end {
+    /* opacity: 0; */
+    display: none;
+}
+.buy .qbh-buy-add-cart-start, .buy .qbh-buy-add-cart-end {
+    position: absolute;
+    bottom: 10px;
+}
+.buy .qbh-buy-add-cart-end {
+    display: none;
+}
+/* 掉下来的沙发 */
+.buy .qbh-buy-rotate-sofa {
+    position: absolute;
+    right: 370px;
+    bottom: 180px;
+    display: none;
+    z-index: 10;
+}
+
+/* 第四屏 */
+.info {
+    background-image: url(../images/qbh-info-bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+}
+.info .qbh-info-cloud {
+    position: absolute;
+    bottom: 550px;
+    left: 50%;
+    animation: cloud 60s linear infinite;
+}
+@keyframes cloud {
+    0% {
+        left: 50%;
+    }
+    50% {
+        left: -10%;
+    }
+    100% {
+        left: 50%;
+    }
+}
+/* 重叠了的文字 */
+.info .qbh-info-worda, .info .qbh-info-wordb {
+    position: absolute;
+    bottom: 500px;
+    left: 50%;
+    margin-left: -215px;
+}
+/* 重叠的文字 */
+.info .qbh-info-wordb {
+    opacity: 0;
+}
+/* 运动的购物车和沙发 */
+.info .qbh-info-cart-box {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    z-index: 10;
+}
+/* 购物车中沙发 */
+.info .qbh-info-rotate-sofa {
+    position: absolute;
+    bottom: 200px;
+    right: 140px;
+    z-index: 9;
+    display: none;
+}
+/* 购物车 */
+.info .qbh-info-cart {
+    position: relative;
+    z-index: 10;
+}
+/* 填写地址栏 */
+.info .qbh-info-address {
+    position: absolute;
+    left: 50%;
+    margin-left: -142px;
+    bottom: 190px;
+    width: 283px;
+    height: 270px;
+    opacity: 0;
+}
+/* 地址栏中信息 */
+.info .qbh-info-address-font {
+    position: absolute;
+    left: 55px;
+    top: 60px;
+    opacity: 0;
+}
