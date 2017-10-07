@@ -68,6 +68,23 @@
     border-radius: 50%;
 }
 
+/* 继续往下 */
+.down {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 999;
+    animation: down 1s linear infinite;
+    display: none;
+}
+@keyframes down {
+    0% {
+        bottom: 5%;
+    }
+    50% {
+        bottom: 10%;
+    }
+}
 /* 第一屏 */
 .qbh-title {
     background-image: url(../images/qbh-title-bg.png);
@@ -327,4 +344,222 @@
     left: 55px;
     top: 60px;
     opacity: 0;
+}
+/* 第五屏 */
+.payment {
+    background-image: url(../images/qbh-payment-bg.png);
+    position: relative;
+}
+/* 储值卡文字 */
+.payment .qbh-payment-font {
+    position: absolute;
+    top:0;
+    left: 20%;
+}
+/* 银行卡 */
+.payment .qbh-payment-cards {
+    position: absolute;
+    bottom: 200px;
+    left: 20%;
+    z-index: 10;
+}
+/* 账单 */
+.payment .qbh-payment-bill {
+    position: absolute;
+    bottom: 270px;
+    left: 27%;
+    z-index: 0;
+}
+
+/* 沙发 */
+.payment .qbh-payment-rotate-sofa-start {
+    position: absolute;
+    bottom: 496px;
+    left: 25%;
+    display: none;
+}
+.payment .qbh-payment-rotate-sofa-end {
+    position: absolute;
+    bottom: 170px;
+    left: 25%;
+    z-index: 5;
+}
+/* 手 */
+.payment .qbh-payment-hands {
+    position: absolute;
+    bottom: -375px;
+    right: 24%;
+    z-index: 30;
+    display: none;
+}
+/* 鼠标 */
+.payment .qbh-payment-mouse-start, .payment .qbh-payment-mouse-end {
+    position: absolute;
+    bottom: 200px;
+    right: 20%;
+}
+.payment .qbh-payment-mouse-end {
+    opacity: 0;
+}
+.payment .qbh-payment-rotate-sofa-continue {
+    position: absolute;
+    bottom: 70px;
+    left: 25%;
+    z-index: 1;
+    display: none;
+}
+/* 第六屏 */
+.delivery {
+    background-image: url(../images/qbh-delivery-bg.png);
+    background-repeat: no-repeat;
+    background-position: 25% 100%;
+    position: relative;
+}
+/* 云彩 */
+.delivery .qbh-delivery-cloud-one {
+    position: absolute;
+    bottom: 500px;
+    right: 20%;
+    animation: deliveryCloud 30s linear infinite;
+}
+.delivery .qbh-delivery-cloud-two {
+    position: absolute;
+    bottom: 500px;
+    right: 30%;
+    animation: deliveryCloud 50s linear infinite;
+}
+@keyframes deliveryCloud {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: 35%;
+    }
+    100% {
+        right: 20%;
+    }
+}
+/* 箱子 */
+.delivery .qbh-delivery-box {
+    position: absolute;
+    left: 0;
+    bottom: 400px;
+    z-index: 2;
+    display: none;
+}
+/* 卡车 */
+.delivery .qbh-delivery-truck {
+    position: absolute;
+    left: 400px;
+    bottom: 0px;
+    z-index: 1;
+}
+/* 送货员 */
+.delivery .qbh-delivery-deliveryman {
+    position: absolute;
+    bottom: 0;
+    right: 750px;
+    width: 10px;
+}
+/* 门 */
+.delivery .qbh-delivery-door {
+    position: absolute;
+    right: 284px;
+    bottom: 116px;
+    display: none;
+}
+/* 女孩 */
+.delivery .qbh-delivery-buyer {
+    position: absolute;
+    right: 284px;
+    bottom: 116px;
+    width: 0;
+}
+/* 商家 */
+.delivery .qbh-delivery-shangjia, .delivery .qbh-delivery-truck-font {
+    position: absolute;
+    left: 600px;
+    bottom: 106px;
+}
+.delivery .qbh-delivery-shangjia {
+    opacity: 0;
+}
+.delivery .qbh-delivery-truck-font {
+    opacity: 0;
+}
+/* 上方标语 */
+.delivery .qbh-delivery-font-start, .delivery .qbh-delivery-font-end {
+    position: absolute;
+    bottom: 479px;
+    left: 30%;
+}
+.delivery .qbh-delivery-font-end {
+    opacity: 0;
+}
+/* 请收货 */
+.delivery .qbh-delivery-shouhuo {
+    position: absolute;
+    bottom: 380px;
+    right: 480px;
+    display: none;
+}
+/* 第七屏 */
+.appraise {
+    background-image: url(../images/qbh-appraise-bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+}
+/* 星星 */
+.appraise .qbh-appraise-star {
+    position: absolute;
+    width: 0;
+    left: 391px;
+    bottom: 445px;
+    font-size: 0;
+    overflow: hidden;
+    height: 13px;
+}
+.appraise .qbh-appraise-star img {
+    display: inline-block;
+    margin-right: 6px;
+}
+/* 好评 */
+.appraise .qbh-appraise-haoping {
+    position: absolute;
+    left: 570px;
+    bottom: 385px;
+    width: 2px;
+    height: 40px;
+    display: none;
+}
+
+/* 第八屏 */
+.shopping {
+    background-image: url(../images/qbh-shopping-bg.png);
+    position: relative;
+}
+/* 购买按钮 */
+.shopping .qbh-shopping-start-shopping, .shopping .qbh-shopping-dong {
+    position: absolute;
+    bottom: 365px;
+    left: 50%;
+    width: 389px;
+    margin-left: -195px;
+}
+/* 再来一次按钮 */
+.shopping .qbh-shopping-again {
+    position: absolute;
+    bottom: 403px;
+    left: 50%;
+    margin-left: 240px;
+}
+/* 手 */
+.shopping .qbh-shopping-hands {
+    position: absolute;
+    z-index: 999;
+}
+/* 动态图 */
+.shopping .qbh-shopping-dong {
+    display: none;
 }
